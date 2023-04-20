@@ -6,6 +6,9 @@ For AH computing I chose to do a web/database project, and I created a music str
 Due to technological-restrictions I was unable to use any frameworks, and was forced to use PHP as my backend, in the XAMPP stack.
 And I had specced it as a single page app, so I had to use a middle layer of javascript between the frontend and the backend.
 
+## Notes
+Due to time constraints, there is some spaghetti code in the project, particularly with the front-end's interaction with PHP. For version 2 of this project, I plan to switch over to using an API that interacts with the JS directly. Unfortunately, the htdocs folder contains many small files that are not organized in a neat way, again due to time constraints.
+
 
 ## Features
 ### Music Playback
