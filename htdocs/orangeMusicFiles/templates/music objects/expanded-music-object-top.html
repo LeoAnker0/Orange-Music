@@ -1,0 +1,50 @@
+<!-- use flex to distribute the image box and then the other box at odds with each other -->
+
+<div class="expanded-music-object-top-box">
+<!-- sets the height of the top box -->
+<div class="expanded-music-object-top-image-container">
+    <img src="images/square-image-5-min.avif" class="expanded-music-object-big-image" /> 
+</div>
+
+<!-- information area -->
+<div class="expanded-music-object-top-information-area">
+    <div class="expanded-music-object-middle-text-area">
+        <div class="expanded-music-object-top-bold-text-area">
+            <span class="expanded-music-object-playlist-title">EVERYTHING AURORA</span><br>
+            <span class="expanded-music-object-playlist-creator">Red</span>
+        </div>
+
+        <div class="expanded-music-object-top-description-container">
+            <div class="expanded-music-object-top-description">
+                Potentially long and potentially short playlist/album description, i guess i will have to see what AM does and i think that for really long ones they have a popup which comes up and does a bit like that other popup, so we might have to make that, but it will be a lot simpler, and pretty easy to implement, where it could almost be an onclick="('the actaully description iself')"
+            </div>
+            <div class="expanded-music-object-view-more-description-button">
+                <div class="more-description-button-gradient"></div>
+                <div class="more-description-button-black">MORE</div>
+            </div>
+        </div>
+
+        <div class="expanded-music-object-top-button-array">
+            <div class="expanded-music-object-play-button">   <img
+                             src="assets/iconsv2/play%20button.svg"
+                             alt="play playlist button"
+                             width="10"
+                             id="play button"
+                            /><span class="music-object-play-button-spacers">Play</span></div>
+            <div class="expanded-music-object-shuffle-button"><img
+                             src="assets/icons/shuffle%20button.svg"
+                             alt="play playlist shuffled button"
+                             width="13"
+                             id="shuffle button"
+                            /><span class="music-object-play-button-spacers">Shuffle</span></div></div>
+        </div>
+
+        <div class="expanded-music-object-main-context-menu"><span class="onclickClass" onclick="loadContextMenu(this, 'musicID', 'TYPEalbumEPsingle')">
+            <img
+                 src="assets/icons/menu%20options%20button.svg"
+                 alt="menu button"
+                 width="15"
+             />
+        </span></div>
+    </div>
+</div>

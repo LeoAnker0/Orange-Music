@@ -1,0 +1,111 @@
+<!-- 
+NOTES!!!!
+
+
+#the onclick event for the menu icon requires the albumEPsingleID to be added, along with the playlistID, but it is important to note, that one of these should have the value of none, specifally, if the object is a albumEPsingle type, then the playlistID should have value "none", because then it can recieve the proper handling and interfacing with the exterior world, IE database
+
+#the two pieces of user readable text need to be hydrated with the proper albumEPsingle / playlist namne, and then the proper artist name needs to be added as well, but not if it's a platist, but again the playlist creator could be added in instead, maybe
+
+#the image src needs to be changed to a proper accessible address, again hydration
+
+#i still need to make the function, but the music-object-container-box needs a onclick event for setting up the change from the library view to the expanded object view, it should be noted that when this happens, after it has all properly loaded in, the top address should be updated to that of this playlist object,
+
+so perhaps it will be relevant to then also add the albumEPsingleID and playlistID so that these can be used as identifiers
+
+
+--
+
+it may also be a wish to include some sort of identifier so that i can deviate between normy playlists, and then the ones that an orange music affiliate have puttogether, since they will then show the creator of the playlist, below the playlist in the main view
+
+
+
+//relevant music id// this will be either: the playlistID; or the albumEPsingleID; or the songID; or the queue ID; depending on where it's being clicked (the menu), so for music object, it will only ever be playlistID, or albumEPsingleID, however if menu gets called on the LCD, then it will be songID, and the same again if it's in the queue, it will then only work with the queue ID, since queue operations are better handled that way
+
+//how to handle// this will be the "function name" of how i want the relevant music ID being dealt with, so sometimes if as specified above, the one context menu will be being called in many different places, so then it needs to be able to deal with this data, and it will do this by being told how to properly deal with the data, by being given a relvant "function name"
+
+songID
+albumEPsingleID
+playlistID
+queueID
+
+
+function names can be as follows {
+    TYPEsong
+    TYPEalbumEPsingle
+    TYPEplaylist
+    TYPEqueue
+}
+
+-->
+
+
+<div class="music-objects-grid-item">
+
+    <!-- onclick event for generating the expanded view, as well as this onclick event needing the playlistID and albumEPsingleID -->
+    <div class="music-object-container-box">
+        <div class="music-object-picture-container">
+            <div class="picture-container">
+                
+                <!-- insert the proper image address here -->
+                <img src="images/square-image-5.jpg" class="picture-class">  
+            </div>
+
+            <div class="music-object-controls"> 
+                <!-- individual box for the play control -->
+                <div class="music-controls-play">
+                    <div class="music-object-blur-border">
+                        <div class="music-object-blur-circle"></div>
+                    </div>
+                    <!-- coloured circle -->
+                    <div class="music-controls-coloured-circle"></div>
+
+                    <!-- play icon -->
+                    <div class="music-controls-button">
+                        <div class="svg-image-buttons-relative-container">
+                            <div class="svg-image-buttons-absolute-container">
+                                <img
+                                 src="assets/iconsv2/play%20button.2.svg"
+                                 height="20"
+                                 />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- individual box for the music menu options -->
+                <div class="music-controls-play">
+                    <!-- blurred circle -->
+                    <div class="music-object-blur-border"><div class="music-object-blur-circle"></div></div>
+
+                    <!-- coloured circle -->
+                    <div class="music-controls-coloured-circle"></div>
+
+                    <!-- menu icon -->
+                    <div class="music-controls-button" onclick="loadContextMenu(this, '<!-- relevant music ID -->', '<!-- how to handle -->')">
+                        <div class="svg-image-buttons-relative-container">
+                            <div class="svg-image-buttons-absolute-container">
+                                <img
+                                 src="assets/icons/menu%20options%20button.svg"
+                                 width="15"
+                                 class="music-menu-options"
+                                 />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- text for the music object -->
+        <div class="music-object-text-container">
+            <div class="music-object-text-object-name">
+                albumEPsingle/playlist name
+            </div>
+
+            <div class="music-object-text-object-creator">
+                Artist name / multiple artist names? still have to work on that one/ none if playlist
+            </div>
+        </div>
+    </div>
+</div>

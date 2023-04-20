@@ -1,0 +1,166 @@
+:root {
+    font-family: 'SFProText';
+    font-weight: 400;
+    
+    /* key lengths and sizes */
+    
+    /* --width-of-vertical-nav == variable controls the width of the vertical navbar, containing all of the links and such
+    
+    --height-of-horizontal-nav == controls the height of the horizontal bar, since the width is fixed, but the height can be changed
+    */
+    --width-of-vertical-nav: 16rem;
+    --height-of-horizontal-nav: 3.5rem;
+    
+    --width-of-up-next-queue: 18rem;
+    
+    /* t--text-margin-of-vertical-nav == is for how far out the the main link text in the vertical nav bar goes
+    
+    --orange-music-logo-left-position == variable is used to keep the logo inline with previous variables text offset.
+    
+    ---vertical-nav-link-text-height == the height of the link texts inside the vertical nav
+    */
+    
+    --orange-music-logo-left-position: 4.6rem;
+    --vertical-nav-link-text-size: 0.9rem;
+    
+    --vertical-nav-link-text-height: 2.2rem;
+    
+    --text-margin-of-vertical-nav-hints: 0.5rem;
+    --margin-of-search-bar: 0.1rem;
+    --text-margin-of-vertical-nav: 2.3rem;
+
+    
+    
+    
+    
+    /* colour variables */
+    --blackest-black:   #000000;
+    --black-black:      #0A0909;
+    --black:            #131211;
+    --less-black:       #1C1B1A;
+    --lessest-black:    #252422;
+    --darkest-grey:     #292825;
+    --jet:              #333234;
+    --dark-grey:        #2C2B28;
+    --grey:             #403D39; 
+    --davys-grey:       #524E49;
+    --granite-grey:     #635f59;
+    --nickel-grey:      #757069;
+    --middle-grey:      #868179;
+    --silver-grey:      #A9a399;
+    --pale-grey:        #bbb4a9;
+    --light-grey:       #CCC5B9;
+    --off-white:        #FFFCF2;
+    --white:            #FFFFFF;
+    
+    --orange--3:        #f4ae93;
+    --orange--2:        #f08b64;
+    --orange--1:        #ee7648;
+    
+    --orange:           #EB5E28;
+    
+    --orange-1:         #c94512;
+    --orange-2:         #a83a0f;
+    --orange-3:         #7d2b0b;
+    --orange-4:         #4d1a07;
+    
+    
+    
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="file"] {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#songs {
+  display: flex;
+  flex-direction: column;
+}
+
+.song {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px;
+}
+
+.song input[type="text"],
+.song input[type="file"] {
+  margin: 0 8px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: var(--orange-1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--orange--1);
+}
+
+
+/* Set a max width for the input and button elements inside each song container */
+.song input, .song button {
+  max-width: calc(50% - 0.5rem);
+}
+
+/* Use flexbox to align the "Remove Song" button to the right */
+.song {
+  display: flex;
+  align-items: center;
+}
+
+.song button {
+  margin-left: auto;
+}
+
+
+
+#progressBar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+#progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  transition: width 0.1s linear;
+}
+
+#status {
+  margin-top: 5px;
+  text-align: center;
+  color: var(black);
+  position: relative;
+  z-index: 100;
+}

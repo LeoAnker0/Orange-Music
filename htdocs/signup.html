@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.utility.css" /> 
+      <link rel="stylesheet" href="orangeMusicFiles/assets/fonts/SF-Pro.css" /><!-- the font file -->
+  </head>
+  <body>
+    
+<br><br>
+      <div id="formContainer">
+            <div id="formContentArea">
+                <!-- for the form selector there should be a visual selector between logging in and signing up, with the default option being login -->
+                <div id="formSelector">
+                    <div id="selectSignUp">
+                        <div class="formSelectorText">Sign Up</div>
+                    </div>
+                    <div id="selectLogIn">
+                        <div class="formSelectorText"><a href="login.html">Login</a></div>
+                    </div>
+                </div>
+                
+                <br>
+                
+                <div id="formErrorMessageContainer">
+                    <div id="formErrorMessage"></div>
+                </div>
+                
+                <br>
+                
+                <div id="form">
+                  <form id="signup" method="POST" enctype="multipart/form-data">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" maxlength="54" required><br>
+        
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br>
+
+        
+      <label for="file">Profile Picture:</label><br>
+      <input type="file" id="file" name="file" accept="image/jpeg"><br>
+        <div id="progressBar">
+          <div id="progress"></div>
+          <div id="status"></div>
+        </div>
+        
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" maxlength="255" required><br>
+        
+      <label for="description">Description:</label><br>
+      <textarea id="description" name="description" maxlength="511"></textarea><br>
+        
+      <input type="submit" value="signup">
+    </form> 
+                    
+                </div>
+                
+                
+            </div>
+            
+        </div>
+
+  </body>
+    <script src="signup.js"></script>
+</html>

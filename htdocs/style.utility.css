@@ -1,0 +1,289 @@
+:root {
+    font-family: 'SFProText';
+    font-weight: 400;
+    
+    /* key lengths and sizes */
+    
+    /* --width-of-vertical-nav == variable controls the width of the vertical navbar, containing all of the links and such
+    
+    --height-of-horizontal-nav == controls the height of the horizontal bar, since the width is fixed, but the height can be changed
+    */
+    --width-of-vertical-nav: 16rem;
+    --height-of-horizontal-nav: 3.5rem;
+    
+    --width-of-up-next-queue: 18rem;
+    
+    /* t--text-margin-of-vertical-nav == is for how far out the the main link text in the vertical nav bar goes
+    
+    --orange-music-logo-left-position == variable is used to keep the logo inline with previous variables text offset.
+    
+    ---vertical-nav-link-text-height == the height of the link texts inside the vertical nav
+    */
+    
+    --orange-music-logo-left-position: 4.6rem;
+    --vertical-nav-link-text-size: 0.9rem;
+    
+    --vertical-nav-link-text-height: 2.2rem;
+    
+    --text-margin-of-vertical-nav-hints: 0.5rem;
+    --margin-of-search-bar: 0.1rem;
+    --text-margin-of-vertical-nav: 2.3rem;
+
+    
+    
+    
+    
+    /* colour variables */
+    --blackest-black:   #000000;
+    --black-black:      #0A0909;
+    --black:            #131211;
+    --less-black:       #1C1B1A;
+    --lessest-black:    #252422;
+    --darkest-grey:     #292825;
+    --jet:              #333234;
+    --dark-grey:        #2C2B28;
+    --grey:             #403D39; 
+    --davys-grey:       #524E49;
+    --granite-grey:     #635f59;
+    --nickel-grey:      #757069;
+    --middle-grey:      #868179;
+    --silver-grey:      #A9a399;
+    --pale-grey:        #bbb4a9;
+    --light-grey:       #CCC5B9;
+    --off-white:        #FFFCF2;
+    --white:            #FFFFFF;
+    
+    --orange--3:        #f4ae93;
+    --orange--2:        #f08b64;
+    --orange--1:        #ee7648;
+    
+    --orange:           #EB5E28;
+    
+    --orange-1:         #c94512;
+    --orange-2:         #a83a0f;
+    --orange-3:         #7d2b0b;
+    --orange-4:         #4d1a07;
+    
+    
+    
+}
+
+
+
+body {
+    margin: 0px;
+}
+
+#formContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+}
+
+#formContentArea {
+    position: relative;
+    background-color: var(--less-black);
+    border-radius: 8px;
+    
+    min-height: 4rem;
+    
+    /*width things*/
+    width: 50%;
+    min-width: 20rem;
+    max-width: 100%;
+ 
+    
+    top: 10%;
+    padding: 1rem;
+    
+    justify-content: center;
+    
+    outline: 2px solid var(--light-grey);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+
+/* this section will be used to add a visual split at the top, allowing the user to switch between signing up and logging in */
+#formSelector {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    display: flex; justify-content: space-evenly; 
+}
+#selectSignUp {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    
+    background-color: var(--off-white);
+    
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+    //outline: 2px solid red;
+    
+    //z-index: 100;
+    border-radius: 0px 6px 6px 0px;
+}
+#selectLogIn {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    
+    background-color: var(--orange-2);
+    
+    border-radius: 6px 0px 0px 6px;
+    
+    color: white;
+    
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formSelectorText {
+    position: relative;
+    top: 30%;
+
+}
+input {
+    border: none;
+    width: calc(50% - 0.5rem);
+    height: 1.7rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+    background-color: var(--grey);
+    border-radius: 3px;
+    color: var(--off-white);
+    
+    //outline: 1px solid var(--light-grey);
+}
+label {
+    color: var(--off-white);
+    font-size: 1.2rem;
+    padding-bottom: 1.4rem;
+    position: relative;
+    height: 2rem;
+}
+textarea {
+    border: none;
+    width: calc(75% - 0.5rem);
+    height: 6rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+     background-color: var(--grey);
+    border-radius: 3px;
+    color: var(--off-white);
+}
+
+#formErrorMessageContainer {
+    position: relative;
+    background-color: var(--orange--3);
+    height: 2rem;
+    border-radius: 4px;
+    outline: 3px solid var(--orange-1);
+
+    //color: white;
+    
+    overflow: hidden;
+    
+    display: none;
+}
+#formErrorMessage {
+    position: relative;
+    margin-left: 1rem;
+    top: 0.3rem;
+    
+    font-weight: 800;
+}
+a {
+    all:  unset;
+}
+
+
+/* for sharenow.html */
+.shareNowSongContainer {
+    //background-color: var(--orange-3);
+    background-color: var(--off-white);
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    
+}
+.shareNowSongRow {
+    height: 6rem;
+    position: relative;
+    width: 100%;
+    //background-color: aqua;
+    border-bottom: 1px solid var(--black);
+    
+}
+.formSideOne, .formSideTwo {
+    position: relative;
+    width: 50%;
+}
+.formSideOne {
+    float: left;
+}
+.formSideTwo {
+    float: right;
+}
+
+.formSideOne label, .formSideTwo label {
+    all: unset;
+    position: relative;
+    padding-left: 0.5rem;
+    padding-top: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    //color: white;
+    color: var(--black);
+    
+}
+.formSideOne input, .formSideTwo input {
+    all: unset;
+    position: relative;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    color: var(--black);
+    width: 90%;
+    outline: 2px solid black;
+    border-radius: 5px;
+    height: 1.5rem;
+    
+}
+
+#progressBar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+#progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  transition: width 0.1s linear;
+}
+
+#status {
+  margin-top: 5px;
+  text-align: center;
+  color: var(black);
+  position: relative;
+  z-index: 100;
+}
+

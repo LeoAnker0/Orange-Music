@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <title>Share Now</title>
+    <link rel="stylesheet" href="style.sharenow.css" /> 
+      <link rel="stylesheet" href="orangeMusicFiles/assets/fonts/SF-Pro.css" /><!-- the font file -->
+    </head>
+    
+    <body><br><br>
+        <form id="albumForm" enctype="multipart/form-data">
+          <div>
+            <label for="albumName">Album Name:</label>
+            <input type="text" id="albumName" name="albumName" required>
+          </div>
+          <div>
+            <label for="albumImage">Album Cover Image:</label>
+            <input type="file" id="albumImage" name="albumImage" accept="image/jpeg" required>
+          </div>
+          <div>
+            <label for="albumDescription">Album Description:</label>
+            <input type="text" id="albumDescription" name="albumDescription"required>
+          </div>
+
+          <div id="progressBar">
+            <div id="progress"></div>
+            <div id="status"></div>
+          </div>
+
+          <div id="songs">
+            <div class="song">
+              <input type="text" name="songName_0" placeholder="Song Name" required>
+              <input type="file" name="songFile_0" accept="audio/*" required>
+            </div>
+              
+          </div>
+          <button type="button" id="addSong">Add Song</button>
+          <button type="submit">Submit</button>
+        </form>
+    </body>
+    <script src="sharenow.js"></script>
+</html>

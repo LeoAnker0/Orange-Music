@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.utility.css" /> 
+      <link rel="stylesheet" href="orangeMusicFiles/assets/fonts/SF-Pro.css" /><!-- the font file -->
+  </head>
+  <body>
+<br><br>
+    <div id="formContainer">
+            <div id="formContentArea">
+                <!-- for the form selector there should be a visual selector between logging in and signing up, with the default option being login -->
+                <div id="formSelector">
+                    <div id="selectLogIn">
+                        <div class="formSelectorText">Log In</div>
+                    </div>
+                    <div id="selectSignUp">
+                        <div class="formSelectorText"><a href="signup.html">Sign Up</a></div>
+                    </div>
+                </div>
+                
+                <br>
+                
+                <div id="formErrorMessageContainer">
+                    <div id="formErrorMessage"></div>
+                </div>
+                
+                <br>
+                
+                <div id="form">
+                  <form id="signup" method="POST" enctype="text/plain">
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" maxlength="255" required><br>
+        
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br>
+      
+        
+        
+      <input type="submit" value="login">
+    </form> 
+                    
+                </div>
+                
+                
+            </div>
+            
+        </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
