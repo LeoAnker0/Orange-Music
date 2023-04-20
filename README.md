@@ -11,7 +11,7 @@ Due to time constraints, there is some spaghetti code in the project, particular
 
 Additionally, there are no tests or similar components included in the project as it was not within the scope of this project and was not feasible due to time constraints.
 
-Furthermore, if I were to start this project again, I would focus on creating a more original content, styling, and name, as it is not enjoyable to simply copy or steal someone else's work. However, it's important to note that all the code in this project is original. While I did not have a clear idea for an original concept when I began the project, this is the current state of it.
+Furthermore, if I were to start this project again, I would focus on creating a more original content, styling, and name. While it is not enjoyable to simply copy or steal someone else's work, I did not have a clear idea for an original concept when I began the project, and this is the current state of it. It is important to note, however, that all the code in the project is original.
 
 
 ## Features
